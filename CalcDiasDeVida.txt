@@ -1,0 +1,14 @@
+ import java.util.Scanner;
+public class Exercicio06 {
+	public static void main(String args[]) {
+		int dias, idade2;
+		Scanner idade;
+		
+		System.out.println("Quantos anos você tem? ");
+		idade  = new Scanner(System.in);
+		idade2 = idade.nextInt();
+		dias = (idade2 * 365);
+		
+		System.out.println("Você ja viveu " + dias + " dias.");
+		}
+	}

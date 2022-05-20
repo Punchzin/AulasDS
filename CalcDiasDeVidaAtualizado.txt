@@ -1,0 +1,28 @@
+import javax.swing.JOptionPane;
+import java.util.*;
+public class Exercicio08 {
+	public static void main(String args[]) {
+		float prova1, prova2, trabalho, media, nota;
+		String aprovado, reprovado, aux;
+		Scanner leia;
+		aprovado = "aprovado";
+		reprovado = "reprovado";
+		
+		aux = JOptionPane.showInputDialog("Nota da prova 1: ");
+		prova1 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota da prova 2: ");
+		prova2 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota do trabalho: ");
+	trabalho = Float.parseFloat(aux);
+		
+		media = (prova1 + prova2 + trabalho)/3;
+		 if(media < 5){
+		        JOptionPane.showMessageDialog(null, "O aluno foi " + reprovado + " com média: " + media);
+		 				} else {
+		 					JOptionPane.showMessageDialog(null, "O aluno foi " + aprovado + " com média: " + media);
+		 						}
+	
+	}
+}

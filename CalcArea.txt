@@ -1,0 +1,20 @@
+import java.util.*;
+public class Exercicio04 {
+	public static void main(String args[]) {
+		double area, conta, altura, largura;
+		Scanner leia;
+		
+		System.out.println("Escreva a altura: ");
+		leia = new Scanner(System.in);
+		altura = leia.nextDouble();
+		
+		System.out.println("Escreva a largura: ");
+		leia = new Scanner(System.in);
+		largura = leia.nextDouble();
+		
+		area = altura * largura;
+		
+		System.out.println("O tamanho de área é de " + area + " metros quadrados.");
+	}
+
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Exercicio09 {
+  public static void main(String[] args) {
+    int lider, time_lanterna, num_vitoria, liderVit, timeLanternaVit;
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Insira a quantidade de pontos do lider: ");
+    lider = Integer.parseInt(sc.nextLine());
+    System.out.println("\nInsira a quantidade de pontos do time lanterna: ");
+    time_lanterna = Integer.parseInt(sc.nextLine());
+    num_vitoria = (lider - time_lanterna)/3;
+    timeLanternaVit = (time_lanterna)/3;
+    liderVit = (lider)/3;
+
+    System.out.println("\nQuantidade de vitorias do líder: " + liderVit);
+    System.out.println("\nQuantidade de vitorias do time lanterna: " + timeLanternaVit);
+    System.out.println("\nQuantidade de vitorias para o lanterna alcançar o lider: " + num_vitoria);
+    
+  }
+}

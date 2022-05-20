@@ -1,0 +1,20 @@
+import java.util.*;
+public class Exercicio07 {
+	public static void main(String args[]) {
+		double valorProduto, porcentagemDesconto, valorDesconto, ProdutoComDesconto;
+		Scanner banana;
+		
+		System.out.println("Valor do produto: ");
+		banana = new Scanner(System.in);
+		valorProduto = banana.nextDouble();
+		
+		System.out.println("Porcentagem de desconto: ");
+		banana = new Scanner(System.in);
+		porcentagemDesconto = banana.nextDouble();
+		
+		valorDesconto = (valorProduto * (porcentagemDesconto / 100));
+		ProdutoComDesconto = (valorProduto - valorDesconto);
+		System.out.println("O valor do desconto é de: " + valorDesconto);
+		System.out.println("O valor do produto com desconto é de: " + ProdutoComDesconto);
+		}
+	}

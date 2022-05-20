@@ -1,0 +1,15 @@
+import java.util.*;
+public class Exercicio05 {
+	public static void main(String args[]) {
+		double ctemp, f;
+		Scanner leia;
+		
+		System.out.println("Quantos graus está fazendo? ");
+		leia = new Scanner(System.in);
+		ctemp = leia.nextDouble();
+		
+		f = (ctemp * 9/5) + 32;
+		
+		System.out.println("A temperatura em Fahrenreit é " + f);
+		}
+	}

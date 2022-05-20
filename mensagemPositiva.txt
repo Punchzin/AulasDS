@@ -1,0 +1,10 @@
+
+public class Exercicio01 {
+	public static void main(String args[]) {
+		String msgPositiva;
+		System.out.println("Levanta a cabeça princesa, se não a coroa cai!");
+		System.out.println("Pense no amanhã como um dia melhor que hoje.");
+
+	}
+
+}
