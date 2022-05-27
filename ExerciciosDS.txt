@@ -1,0 +1,241 @@
+Dupla: Gabriel Soares e Marlon Soares
+
+____________________________________________________________
+exercicio 1 -  faça uma classe que mostre uma mensagem de otimismo.
+--------------------------------------------------------------------------------------------------------------
+
+public class Exercicio01 {
+	public static void main(String args[]) {
+		String msgPositiva;
+		System.out.println("Levanta a cabeça princesa, se não a coroa cai!");
+		System.out.println("Pense no amanhã como um dia melhor que hoje.");
+
+	}
+
+}
+______________________________________________________________________________________________________________
+exercicio 2 - faça uma classe que peça uma mensagem de otimismo, e exiba.
+--------------------------------------------------------------------------------------------------------------
+
+import java.util.*;
+public class Exercico02 {
+	public static void main(String args[]) {
+		String msgPositiva;
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.println("Escreva sua mensagem otimista: ");
+			msgPositiva = sc.nextLine();
+			System.out.println("Sua mensagem é: " + msgPositiva);
+		
+		}finally {
+			
+		}
+		
+		
+	}
+	
+
+}
+
+______________________________________________________________________________________________________________
+exercicio 3 - contruia um programa em Java para exibir os seguintes dados: idade/nome/coisa favorita.
+--------------------------------------------------------------------------------------------------------------
+
+import java.util.*;
+public class Exercicio03 {
+	public static void main(String args[]) {
+		String nome, lazer;
+		int idade;
+		Scanner leia;
+		
+		System.out.println("Escreva seu nome: ");
+		leia = new Scanner(System.in);
+		nome = leia.nextLine();
+		
+		System.out.println("Escreva sua idade: ");
+		leia = new Scanner(System.in);
+		idade = leia.nextInt();
+		
+		System.out.println("Escreva seu hobbie favorito: ");
+		leia = new Scanner(System.in);
+		lazer = leia.nextLine();
+		
+		
+		System.out.println("Tu nome é: " + nome);
+		System.out.println("Tu idade é: " + idade);
+		System.out.println("Tu hobie é: " + lazer);
+	}
+}
+
+______________________________________________________________________________________________________________
+exercicio 4 - desenvolva um programa em java que receba as informações, calcule e exiba o tamanho de uma área em metros quadrados. Use as variáveis area, altura e largura
+--------------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class Exercicio04 {
+	public static void main(String args[]) {
+		double area, conta, altura, largura;
+		Scanner leia;
+		
+		System.out.println("Escreva a altura: ");
+		leia = new Scanner(System.in);
+		altura = leia.nextDouble();
+		
+		System.out.println("Escreva a largura: ");
+		leia = new Scanner(System.in);
+		largura = leia.nextDouble();
+		
+		area = altura * largura;
+		
+		System.out.println("O tamanho de área é de " + area + " metros quadrados.");
+	}
+
+}
+
+______________________________________________________________________________________________________________
+exercicio 5 - faça um programa em java que receba a temperatura em graus Celsius e converta em Fahrenheit.
+--------------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class Exercicio05 {
+	public static void main(String args[]) {
+		double ctemp, f;
+		Scanner leia;
+		
+		System.out.println("Quantos graus está fazendo? ");
+		leia = new Scanner(System.in);
+		ctemp = leia.nextDouble();
+		
+		f = (ctemp * 9/5) + 32;
+		
+		System.out.println("A temperatura em Fahrenreit é " + f);
+		}
+	}
+
+______________________________________________________________________________________________________________
+exercicio 6 - Crie um programa que solicite sua idade e calcule quantos dias de vida você já viveu até hoje.
+--------------------------------------------------------------------------------------------------------------
+ import java.util.Scanner;
+public class Exercicio06 {
+	public static void main(String args[]) {
+		int dias, idade2;
+		Scanner idade;
+		
+		System.out.println("Quantos anos você tem? ");
+		idade  = new Scanner(System.in);
+		idade2 = idade.nextInt();
+		dias = (idade2 * 365);
+		
+		System.out.println("Você ja viveu " + dias + " dias.");
+		}
+	}
+______________________________________________________________________________________________________________
+exercicio 7 - Crie uma classe que receba o valor de um produto e a porcentagem de desconto. calcule e mostre o valor do desconto e o valor fo produto com o desconto.
+--------------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class Exercicio07 {
+	public static void main(String args[]) {
+		double valorProduto, porcentagemDesconto, valorDesconto, ProdutoComDesconto;
+		Scanner banana;
+		
+		System.out.println("Valor do produto: ");
+		banana = new Scanner(System.in);
+		valorProduto = banana.nextDouble();
+		
+		System.out.println("Porcentagem de desconto: ");
+		banana = new Scanner(System.in);
+		porcentagemDesconto = banana.nextDouble();
+		
+		valorDesconto = (valorProduto * (porcentagemDesconto / 100));
+		ProdutoComDesconto = (valorProduto - valorDesconto);
+		System.out.println("O valor do desconto é de: " + valorDesconto);
+		System.out.println("O valor do produto com desconto é de: " + ProdutoComDesconto);
+		}
+	}
+
+______________________________________________________________________________________________________________
+exercicio 8 - Elabore uma classe que receba a nota de duas provas e de um trabalho. Calcule e mostre a média e o resultado final(Aprovado ou Reprovado). Utilize a classe JOptionPane´para a entrada de dados.
+--------------------------------------------------------------------------------------------------------------
+import javax.swing.JOptionPane;
+import java.util.*;
+public class Exercicio08 {
+	public static void main(String args[]) {
+		float prova1, prova2, trabalho, media, nota;
+		String aprovado, reprovado, aux;
+		Scanner leia;
+		aprovado = "aprovado";
+		reprovado = "reprovado";
+		
+		aux = JOptionPane.showInputDialog("Nota da prova 1: ");
+		prova1 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota da prova 2: ");
+		prova2 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota do trabalho: ");
+	trabalho = Float.parseFloat(aux);
+		
+		media = (prova1 + prova2 + trabalho)/3;
+		 if(media < 5){
+		        JOptionPane.showMessageDialog(null, "O aluno foi " + reprovado + " com média: " + media);
+		 				} else {
+		 					JOptionPane.showMessageDialog(null, "O aluno foi " + aprovado + " com média: " + media);
+		 						}
+	
+	}
+}
+
+______________________________________________________________________________________________________________
+exercicio 9 - faca uma classe que receba dois valores inteiros. O primeiro valor corresponde a quantidade de pontos do lider do campeonato brasileiro de futebol. O segundo valor corresponde à quantidade de pontos do time Lanterna. Elabore uma classe que calcule o número de vitórias necessarias para o time lanterna ultrapassar o time lider. Considere que cada vitória vale 3 pontos.
+--------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Exercicio09 {
+  public static void main(String[] args) {
+    int lider, time_lanterna, num_vitoria, liderVit, timeLanternaVit;
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Insira a quantidade de pontos do lider: ");
+    lider = Integer.parseInt(sc.nextLine());
+    System.out.println("\nInsira a quantidade de pontos do time lanterna: ");
+    time_lanterna = Integer.parseInt(sc.nextLine());
+    num_vitoria = (lider - time_lanterna)/3;
+    timeLanternaVit = (time_lanterna)/3;
+    liderVit = (lider)/3;
+
+    System.out.println("\nQuantidade de vitorias do líder: " + liderVit);
+    System.out.println("\nQuantidade de vitorias do time lanterna: " + timeLanternaVit);
+    System.out.println("\nQuantidade de vitorias para o lanterna alcançar o lider: " + num_vitoria);
+    
+  }
+
+______________________________________________________________________________________________________________
+exercicio 10 - digite sua data de nascimento e calcule a quantidade de dias usando a data do sistema.
+--------------------------------------------------------------------------------------------------------------
+import javax.swing.JOptionPane;
+import java.util.*;
+public class Exercicio08 {
+	public static void main(String args[]) {
+		float prova1, prova2, trabalho, media, nota;
+		String aprovado, reprovado, aux;
+		Scanner leia;
+		aprovado = "aprovado";
+		reprovado = "reprovado";
+		
+		aux = JOptionPane.showInputDialog("Nota da prova 1: ");
+		prova1 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota da prova 2: ");
+		prova2 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota do trabalho: ");
+	trabalho = Float.parseFloat(aux);
+		
+		media = (prova1 + prova2 + trabalho)/3;
+		 if(media < 5){
+		        JOptionPane.showMessageDialog(null, "O aluno foi " + reprovado + " com média: " + media);
+		 				} else {
+		 					JOptionPane.showMessageDialog(null, "O aluno foi " + aprovado + " com média: " + media);
+		 						}
+	
+	}
+}
