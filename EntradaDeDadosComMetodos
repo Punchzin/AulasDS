@@ -3,7 +3,7 @@ public class EntradaDeDadosComMetodos {
 	static String aux = "";
 	public static int lerNumerosInt(in minimo, int maximo, String men);
 	int n = 0;
-	white(true){
+	white (true){
 		try {
 			aux = JOptionPane.showInputDialog(men);
 			n = Integer.paseInt(aux);
@@ -22,7 +22,14 @@ public class EntradaDeDadosComMetodos {
 	float n = 0;
 	white(true);
 	try {
-		aux = JOptionPane.showInputDialog(message)
+		aux = JOptionPane.showInputDialog(men);auxn = Float.parseFloat(aux);
+		if (n < minimo 11 n > maximo) {
+			JOptionPane.showMessageDialog(null, "Entrada fora da faixa permitida!");
+		}else {
+			break;
+		}
+	} catch(NumberException erro) {
+		JOptionPane.showMessageDialog(null, "Digite apenas valores numericos!\n" + erro.toString());
 	}
-
+	return(n);
 }
