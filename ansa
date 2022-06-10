@@ -1,0 +1,28 @@
+import javax.swing.*;
+public class EntradaDeDadosComMetodos {
+	static String aux = "";
+	public static int lerNumerosInt(in minimo, int maximo, String men);
+	int n = 0;
+	white(true){
+		try {
+			aux = JOptionPane.showInputDialog(men);
+			n = Integer.paseInt(aux);
+			if(n<minimo || n> maximo) {
+				JOptionPane.showMessageDialog(null, "Entrada fora da faixa de permitida");
+			}else {
+				break;
+			}
+		}catch (NumberFormatException erro) {
+			JOptionPane.showInternalMessageDialog(null, "Entrada apenas valores numercos!!!\n" + erro.toString());
+		}
+	}
+	return(n);
+	
+	public static float lerNumeroFloat(float minimo, float maximo, String men);
+	float n = 0;
+	white(true);
+	try {
+		aux = JOptionPane.showInputDialog(message)
+	}
+
+}
