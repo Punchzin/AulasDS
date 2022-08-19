@@ -1,0 +1,65 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class GuiMenuPrincipal extends JFrame{
+    private Container contentPane;
+    private JMenuBar mnBarra;
+    private JMenu mnArquivo, mnExemplos;
+    private JMenuItem miSair, miBotao;
+    
+    public GuiMenuPrincipal(){
+        inicializarComponentes();
+        definirEventos();
+    }
+    
+    private void inicializarComponentes(){
+        setTitle("Menu Principal");
+        setBounds(0, 0, 800, 600);
+        contentPane = getContentPane();
+        mnBarra = new JMenuBar();
+        mnArquivo = new JMenu("Menu");
+        mnArquivo.setMnemonic('A');
+        mnExemplos = new JMenu("Exemplos");
+        mnExemplos.setMnemonic('E');
+        miSair = new JMenuItem("Sair", new ImageIcon("icones/sair.png"));
+        miSair.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.ALT_MASK));
+        miBotao = new JMenuItem("Botao");
+        mnArquivo.add(miSair);
+        mnExemplos.add(miBotao);
+        mnBarra.add(mnArquivo);
+        mnBarra.add(mnExemplos);
+        setJMenuBar(mnBarra);
+        
+         }
+            
+         private void definirEventos(){
+             miSair.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    System.exit(0);
+                }
+         });
+             
+             miBotao.addActionListener(new ActionListener(){
+             public void actionPerfomed(ActionEvent e){
+             //aqui vai o código para chamr o exemplo8.3
+                }
+
+                 @Override
+                 public void actionPerformed(ActionEvent arg0) {
+                     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                 }
+            });
+        }
+   
+         public static void abrir(){
+             GuiMenuPrincipal frame = new GuiMenuPrincipal();
+             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+             Dimension tela = Toolkit.getDefaultToolkit().getScreenSize();
+             frame.setLocation(
+                     (tela.width - frame.getSize().width) / 2,
+                     (tela.height - frame.getSize().height) / 2
+             );
+             frame.setVisible(true);
+         }
+}
